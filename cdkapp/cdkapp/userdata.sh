@@ -2,7 +2,7 @@
 sudo yum update -y
 sudo yum -y install jq
 sudo yum install -y python3
-export bucket_name=$(aws s3api list-buckets --query 'Buckets[*].[Name]' --output text | grep lab-)
+export bucket_name=$(aws s3api list-buckets --query 'Buckets[*].[Name]' --output text | grep vpcapp)
 aws s3 cp s3://$bucket_name/vpcapp.zip .
 unzip vpcapp.zip
 export REGION=$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/document|jq -r .region)

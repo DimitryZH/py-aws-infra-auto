@@ -54,3 +54,62 @@ The infrastructure can be easily customized by modifying the CDK stack definitio
 ## Conclusion
 
 This project showcases best practices for deploying a Python web application on AWS, emphasizing security, scalability, and automation. It serves as an excellent starting point for developers looking to set up a robust AWS infrastructure for their Python applications.
+
+AWS version
+
+# AWS Infrastructure Automation with CDK
+
+This project uses AWS Cloud Development Kit (CDK) to automate the deployment and management of AWS infrastructure. It provides a robust, code-based approach to defining and provisioning cloud resources, enabling Infrastructure as Code (IaC) practices.
+
+## Project Overview
+
+This CDK application is designed to create and manage AWS resources programmatically. It leverages the power of AWS CDK to define cloud infrastructure using familiar programming languages, in this case, Python.
+
+Key features of this project include:
+
+- Infrastructure as Code: Define your AWS resources using Python, allowing for version control, code review, and consistent deployments.
+- Automated Resource Management: Easily create, update, and delete AWS resources across multiple environments.
+- Best Practices Implementation: Incorporates AWS recommended practices for resource configuration and security.
+- Cross-Account and Cross-Region Support: Capable of managing resources across different AWS accounts and regions.
+
+## Technical Stack
+
+- AWS CDK: For defining cloud infrastructure as code
+- Python: Primary programming language for CDK constructs
+- AWS Services: Various AWS services as defined in the CDK stacks
+
+## Project Structure
+
+The project follows the standard CDK application structure:
+
+- `app.py`: The entry point for the CDK application
+- `cdk.json`: Contains CDK application configuration and context
+- `requirements.txt`: Lists Python dependencies for the project
+- `/cdkapp`: Directory containing the CDK stack definitions
+
+## Getting Started
+
+[Include instructions on how to set up and run the project]
+
+## Deployment
+
+To deploy the infrastructure:
+
+cdk deploy
+
+To destroy the created resources:
+cdk destroy --all
+
+## Configuration
+
+The `cdk.json` file includes various configuration options and feature flags for AWS services. These can be adjusted based on specific project requirements.
+
+[You might want to explain any custom configurations or important settings here]
+
+## Contributing
+
+[Include guidelines for contributing to the project]
+
+## License
+
+[Specify the license under which this project is released]
