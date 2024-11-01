@@ -109,7 +109,20 @@ class CdkappStack(Stack):
             # add an existing role with name ec2_instance_role
             role = iam.Role.from_role_name(self, "ec2_instance_role", "ec2_instance_role")
         )
-            
+
+        
+        # Create a second t2.small EC2 instance for the web server in a private egress subnet and vpc.availability_zones[1]
+        second_ec2_instance = ec2.Instance(self, "MySecondInstance",
+            instance_type=ec2.InstanceType("t2.small"),
+            machine_image=amzn_linux,
+            vpc=vpc,
+            vpc_subnets=ec2.SubnetSelection(subnet_type=ec2.SubnetType.PRIVATE_WITH_EGRESS),
+            availability_zone=vpc.availability_zones[1],
+            user_data=ec2.UserData.custom(userdata),
+            security_group=ec2_sg,
+            role=iam.Role.from_role_name(self, "ec2_instance_role_2", "ec2_instance_role")
+        )
+          
         # create a load balancer for the web server
         lb = elbv2.ApplicationLoadBalancer(self, "MyLoadBalancer",
             vpc = vpc,
@@ -129,14 +142,9 @@ class CdkappStack(Stack):
             
         # add depends on for the web server to wait for the RDS cluster to be available
         ec2_instance.node.add_dependency(cluster)
-        
+        #Add dependency for the second EC2 instance to wait for the RDS cluster
+        second_ec2_instance.node.add_dependency(cluster)
         # add depends on for the listener to wait for the web server to be available
         listener.node.add_dependency(ec2_instance)
             
-
-            
-            
-                
-            
         
-
