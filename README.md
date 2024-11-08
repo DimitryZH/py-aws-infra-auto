@@ -15,7 +15,10 @@ The project sets up a comprehensive AWS environment for hosting a Python web app
 - Security groups for network access control
 - IAM roles for EC2 instance permissions
 
-## Key Components
+## Architecture Diagram
+![vpc-infra](https://github.com/user-attachments/assets/10692c1c-969f-4567-8c6a-1850e1ac8630)
+
+## Key Components:
 
 ### VPC
 
