@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This project uses AWS Cloud Development Kit (CDK) to automate the deployment and management of AWS infrastructure, enabling Infrastructure as Code (IaC) practices. The infrastructure is designed to be scalable, secure, and highly available.
+This project leverages the AWS Cloud Development Kit (CDK) to automate the deployment and management of AWS infrastructure, following Infrastructure as Code (IaC) principles. The project name highlights the use of Python to generate AWS CloudFormation templates, offering a Python-based IaC solution for resource provisioning. The infrastructure is designed to be scalable, secure, and highly available.
 
 ## Features
 
-The project sets up a comprehensive AWS environment for hosting a Python web application, including:
+"Python AWS Infrastructure Automation" project sets up a comprehensive AWS environment for hosting a Python web application. Upon user request, the application returns data from the database about the population of countries by year. The infrastructure includes:
 
 - Custom VPC with public, private, and isolated subnets
 - Amazon RDS Aurora MySQL cluster
@@ -15,7 +15,7 @@ The project sets up a comprehensive AWS environment for hosting a Python web app
 - Security groups for network access control
 - IAM roles for EC2 instance permissions
 
-## Key Components
+## Key Components:
 
 ### VPC
 
