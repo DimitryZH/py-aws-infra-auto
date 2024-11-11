@@ -15,7 +15,7 @@ This project leverages the AWS Cloud Development Kit (CDK) to automate the deplo
 - Security groups for network access control
 - IAM roles for EC2 instance permissions
 
-## Key Components:
+## Key Components
 
 ### VPC
 
