@@ -15,6 +15,9 @@ This project leverages the AWS Cloud Development Kit (CDK) to automate the deplo
 - Security groups for network access control
 - IAM roles for EC2 instance permissions
 
+## Architecture diagram
+![vpc-infra](https://github.com/user-attachments/assets/b07718f2-7b70-40ac-ab5d-f8f7276ac29c)
+
 ## Key Components
 
 ### VPC
@@ -54,6 +57,11 @@ The infrastructure can be customized by modifying the CDK stack definition, incl
 - `requirements.txt`: Python dependencies
 - `/cdkapp`: Directory containing CDK stack definitions
 
+## Configuration
+
+The `cdk.json` file includes various configuration options and feature flags for AWS services. These can be adjusted based on specific project requirements.
+
+
 ## Deployment Process
 
 The infrastructure is defined as Python code using AWS CDK, allowing for version-controlled, repeatable deployments. The Python web application will be deployed to the EC2 instances.
@@ -71,11 +79,30 @@ To destroy the created resources:
 ```sh
 cdk destroy --all
 ```
+## Results
 
-## Configuration
+### Resources created via VS Code
 
-The `cdk.json` file includes various configuration options and feature flags for AWS services. These can be adjusted based on specific project requirements.
+![vsc-resources-created](https://github.com/user-attachments/assets/0a70be56-b3b6-48b1-a88a-6ed0ed510d72)
+
+### Resources created at VS AWS
+
+![resorces-created](https://github.com/user-attachments/assets/c785f2e7-614a-474d-81c2-2dfa30fb7cd9)
+
+### Register targets for Load Balancer
+
+![register-targets-helthy](https://github.com/user-attachments/assets/861a4a29-3d22-4286-b586-ab154ba9868a)
+
+### Deployed application with sample user request in Availability Zone 1
+
+![az1](https://github.com/user-attachments/assets/beaac857-322a-43ff-a1c7-a3ab7201e237)
+
+### The application returned data from the database. Example for Availability Zone 2.
+
+![az2-response](https://github.com/user-attachments/assets/9cfb984e-1ee2-4ec8-ab4c-1184df72db71)
+
 
 ## Conclusion
 
-This project showcases best practices for deploying a Python web application on AWS, emphasizing security, scalability, and automation.
+This project showcases best practices for deploying AWS infrastructure using Python automation, emphasizing Infrastructure as Code (IaC) principles. It highlights security, scalability, and automation in provisioning resources for a Python web application.
+
